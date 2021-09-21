@@ -1862,7 +1862,7 @@ void test01()
 
 	Person p2;
 	p2.m_A = 200;
-	cout << "p1.m_A = " << p1.m_A << endl; //共享同一份数据
+	cout << "p1.m_A = " << p1.m_A << endl; //200, 共享同一份数据
 	cout << "p2.m_A = " << p2.m_A << endl;
 
 	//2、通过类名
@@ -4759,7 +4759,7 @@ C++中对文件操作需要包含头文件 ==&lt; fstream &gt;==
 
    ofs.close();
 
-   ​
+   
 
 文件打开方式：
 
