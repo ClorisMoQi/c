@@ -1531,7 +1531,7 @@ STL大体分为六大组件，分别是:**容器、算法、迭代器、仿函�
 1. 容器：各种数据结构，如vector、list、deque、set、map等,用来存放数据。
 2. 算法：各种常用的算法，如sort、find、copy、for_each等
 3. 迭代器：扮演了容器与算法之间的胶合剂。
-4. 仿函数：行为类似函数，可作为算法的某种策略。
+4. 仿函数：行为类似函数，可作为算法的某种策略。(e.g. 重载=)
 5. 适配器：一种用来修饰容器或者仿函数或迭代器接口的东西。
 6. 空间配置器：负责空间的配置与管理。
 
@@ -1644,8 +1644,8 @@ void test01() {
 	//v.end()返回迭代器，这个迭代器指向容器元素的最后一个元素的下一个位置
 	//vector<int>::iterator 拿到vector<int>这种容器的迭代器类型
 
-	vector<int>::iterator pBegin = v.begin();
-	vector<int>::iterator pEnd = v.end();
+	vector<int>::iterator pBegin = v.begin(); // 指向vector第一个元素
+	vector<int>::iterator pEnd = v.end(); // 指向vector最后一个元素的下一位
 
 	//第一种遍历方式：
 	while (pBegin != pEnd) {
@@ -1887,7 +1887,7 @@ void test01()
 	string s3(s2); //调用拷贝构造函数
 	cout << "str3 = " << s3 << endl;
 
-	string s4(10, 'a');
+	string s4(10, 'a'); // aaaaaaaaaa
 	cout << "str3 = " << s3 << endl;
 }
 
@@ -2932,7 +2932,7 @@ int main() {
 
 总结：swap可以使两个容器互换，可以达到实用的收缩内存效果
 
-
+<video src="./assets/vector_swap_shirk_size.MP4" controls="constrols"> Your browser does not support the video tag</video>
 
 
 
